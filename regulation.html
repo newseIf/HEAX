@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регламент</title>
+</head>
+<body>
+    <header class="header">
+        <h1><a href="./index.html"><img src="./img/logo.png" alt=""></a></h1>
+        <ul>
+            <li><a href="./team.html">Результаты</a></li>
+            <li><a href="./Player.html">Участники</a></li> 
+            <li><a href="./prize.html">Призы</a></li>
+            <li><a href="./regulation.html">Регламент</a></li>
+        </ul>
+    </header>
+    <hr> 
+    <div class="container">
+        <div class="format">
+            <h2>Формат:</h2>
+            <ul>
+                <li>Стандартный бой (Штурм, встречный бой и прочие запрещены)</li>
+                <li>Взвод должен всегда состоять из трех типов техники 10 уровня: – 1 ТТ, 1 СТ, 1 ПТ. (ограничений на технику нет)</li>
+                <li>Выбор сервера и бан карт не регламентируется, игроки выбирают сами.</li>
+            </ul>
+            <p>* Переигровка не предусмотрена (вылеты рассматриваются в индивидуальном порядке)</p>
+        </div>
+        <div class="formula">
+            <h2>Формула начисления:</h2>
+            <table border="1" cellpadding="4" cellspacing="0"> 
+                <tr>
+                    <td>1 Урон</td>
+                    <td>1 Очко</td>
+                </tr>
+                <tr>
+                    <td>1 Фраг</td>
+                    <td>300 Очков</td>
+                </tr>
+                <tr>
+                    <td>1 Победа</td>
+                    <td>3000 Очков</td>
+                </tr>
+            </table>
+        </div>
+        <div class="result">
+            <h2>Результаты:</h2>
+            <p>Перед началом матча все игроки должны сбросить сессионки и настроить информацию в сессионках следующим образом:</p>
+            <div class="img">
+                <img src="./img/sesion1.jpg"  alt="">
+                <img src="./img/sesion2.jpg"  alt="">
+            </div>
+        
+        </div>
+        <div class="setting">
+            <p> После матча каждый из игроков направляет организаторам скриншот сессионки с указанием никнейма и названием команды </p>
+            <p class="dop">*У каждого игрока должны писаться ВСЕ реплеи. В случае возникновения спорных ситуаций организаторы могут запросить реплеи.</p>
+            <img src="./img/setting.jpg" alt="">
+        </div>
+        <div class="time">
+            <p> Время проведения:</p>
+            <ul>
+                <li>16-17 Апреля – Тренировки (в зачет не идет)</li>
+                <li>18-20 Апреля – проходит Групповой этап </li>
+                <li>21-23 Апреля – проходит Плей-офф (1/4)</li>
+                <li>21-23 Апреля – проходит Плей-офф (1/4)</li>
+                <li>27-28 Апреля – проходит Финал  (надо договориться чтобы финалисты играли в одно время)</li>
+            </ul>
+            <p class="dop">* Даты и время могут менятся при необходимости  </p>
+            <p>Проходят все команды.На основе результатов строиться сетка Плей-офф:</p>
+            <img src="./img/grid.jpg" alt="">
+        </div>
+    </div>   
+        
+    <style scoped>
+    body {
+        overflow-x: hidden;
+    }
+    * {
+        font-family: "Roboto Condensed", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 18px;
+    }
+
+    header img {
+        margin-left: 30px;
+        width: 50%;
+    }
+    header ul {
+        list-style: none;
+        float: right;
+    }
+    header ul li {
+        display: inline-block;
+        margin-left: 40px;
+        padding: 30px;
+        font-weight: 500;
+    }
+    @media screen and (max-width: 1025px) and (min-width:0px) {
+        header ul li {
+            padding: 0;
+        }
+    }
+    header ul li a
+    {
+        text-decoration: none;
+    }
+    header ul li a:link{
+        color:DarkOrchid;
+    }
+    header ul li a:visited{
+        color:DarkOrchid;
+    }
+    header ul li a:hover{
+        color:DarkOrchid;
+    }
+    header ul li a:focus{
+        color:DarkOrchid;
+    }
+    header ul li a:active{
+        color:DarkOrchid;
+    }
+
+    header ul li a:hover{
+        text-decoration: none;
+        border-bottom: 2px solid DarkOrchid;
+        padding-bottom: 3px;
+    }
+    header {
+        display: flex;
+        height: 100px;
+    }
+
+    hr {
+        margin: 30px -20px 20px;
+        border: 0;
+        border-top: 1px solid #c9c7c7;
+    }
+    
+    .container {
+        font-family: "Roboto Condensed", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        margin: 0 10%;
+        padding: 0;
+        font-size: 18px;
+    }
+    .format li {
+        padding: 5px;
+    }
+    .format p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .formula table {
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+    .formula td{
+        border: 1px solid;
+        padding: 5px 15px;
+        align-items: center;
+    }
+    .result {
+        margin-top: 20px;
+    }
+    .result .img {
+        display: flex;
+    }
+    .result .img img {
+        width: 30%;
+        margin: 3px;
+    }
+    .result h2{
+        margin-bottom: 10px;
+    }
+    .result p{
+        margin-top: 10px;
+    }
+    .setting {
+        margin-top: 55px;
+    }
+    .setting p:first-child {
+        margin-bottom: 5px;
+    }
+    .dop{
+        margin-top  : 10px;
+        font-size: 14px;
+        padding: 5px 5px;
+    }
+    .setting img {
+        width: 50%;
+    }
+    .time ul{
+        list-style: none;
+    }
+    .time ul li{
+        padding: 10px;
+        font-weight: 500;
+    }
+    .time p {
+        margin-bottom: 0;
+    }
+    .time img {
+        width: 70%;
+    }
+    </style>
+</body>
+</html>
