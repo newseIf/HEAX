@@ -107,9 +107,10 @@
     }
     .table {
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         justify-content: center;
         gap: 1px;
+        margin: 0 15%;
     }
     .table > div {
         border: 1px;
@@ -173,9 +174,17 @@
         height: 42px;
         width: 100px;
     }
+    @media screen and (max-width: 1025px) and (min-width:0px) {
+        input {
+            padding: 0;
+            margin: 0;
+            width: 60px;
+        }
+
+    }
       </style>
       
-      <script >
+    <script >
         function SumPoint () {
             point1 = document.getElementById("first_num").value * 20;
             point2 = document.getElementById("two_num").value * 20;
@@ -186,7 +195,7 @@
             win = document.getElementById("win").value *3000;
             document.getElementById("result").innerHTML = point1 + point2 + point3 + kill1 + kill2 + kill3 + win;
             document.getElementById("batle").innerHTML = (point1 + point2 + point3 + kill1 + kill2 + kill3 + win) / 20;
-}
-        </script>
+        }
+    </script>
 </body>
 </html>
