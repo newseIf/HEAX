@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title> 
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html"><img src="./img/logo.png" alt=""></a></h1>
+        <ul>
+            <li><a href="./team.html">Результаты</a></li>
+            <li><a href="./Player.html">Участники</a></li> 
+            <li><a href="./prize.html">Призы</a></li>
+            <li><a href="./regulation.html">Регламент</a></li>
+            <li><a href="./calk.html">Калькулятор</a></li>
+        </ul>
+    </header>
+    <hr> 
+        <div class="table">
+          <div class="point">
+            <h2>Ср.Урон</h2>
+            <input type="number" id="first_num"/> 
+            <input type="number" id="two_num"/> 
+            <input type="number" id="three_num"/> 
+          </div>
+          <div class="kill">
+            <h2>Фраги</h2>
+            <input type="number" id="first_kill"/> 
+            <input type="number" id="two_kill"/> 
+            <input type="number" id="three_kill"/>
+          </div>
+          <div class="win">
+            <h2>Победы</h2>
+            <input type="number" id="win"/>
+          </div>
+          <div class="sum">
+            <h2>Общие очки/За бой</h2>
+            <input type="button" onClick="SumPoint ()" Value="Сумма" />
+            <p id="result"></p> /
+            <p id="batle"></p>
+          </div>
+        </div>
+        <br>
+      
+      <style scoped>
+    *{
+      font-family: "Roboto Condensed", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-size: 18px;
+    }
+    header img {
+        margin-left: 30px;
+        width: 50%;
+    }
+    header ul {
+        list-style: none;
+        float: right;
+    }
+    header ul li {
+        display: inline-block;
+        margin-left: 40px;
+        padding: 30px;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    @media screen and (max-width: 1025px) and (min-width:0px) {
+        header ul li {
+            padding: 0;
+        }
+    }
+    header ul li a
+    {
+        text-decoration: none;
+    }
+    header ul li a:link{
+        color:DarkOrchid;
+    }
+    header ul li a:visited{
+        color:DarkOrchid;
+    }
+    header ul li a:hover{
+        color:DarkOrchid;
+    }
+    header ul li a:focus{
+        color:DarkOrchid;
+    }
+    header ul li a:active{
+        color:DarkOrchid;
+    }
+
+    header ul li a:hover{
+        text-decoration: none;
+        border-bottom: 2px solid DarkOrchid;
+        padding-bottom: 3px;
+    }
+    header {
+        display: flex;
+        height: 100px;
+    }
+
+    hr {
+        margin: 30px -20px 20px;
+        border: 0;
+        border-top: 1px solid #c9c7c7;
+    }
+    .table {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        justify-content: center;
+        gap: 1px;
+    }
+    .table > div {
+        border: 1px;
+        background-color: 	#CCCCCC;
+        text-align: center;
+        
+    }
+    p {
+        color: #333;
+        font-size: 18px;
+    }
+    .table .team p {
+        padding: 50px 10px;
+    }
+    .table .player  p {
+        padding: 10px 5px;
+    }
+    .table .tank  p {
+        padding: 10px 5px;
+    }
+    .table .win p {
+        padding: 20px 10px;
+    }
+    h2 {
+        padding: 4px 4px;
+        background-color:#00CED1;
+        color: #333;
+        margin: 0;
+    }
+    input {
+        margin: 5px 5px;
+        padding: 5px 2px;
+        background-color: #CCCCCC;
+        outline: none;
+        user-select: none;
+        appearance: none;
+        color:#eeeeee;
+    }
+    
+    .table .sum button {
+        box-sizing: border-box;
+        padding: 0 15px;
+        margin: 0 15px 15px 0;
+        outline: none;
+        border: 1px solid #00CED1;  
+        border-radius: 5px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+        background-color: #00CED1;
+        cursor: pointer;
+        user-select: none;
+        appearance: none;
+    }
+    .table .sum button:hover {
+        background-color: #4bda46;
+        border-color: #4bda46;
+        height: 42px;
+        width: 100px;
+    }
+      </style>
+      
+      <script >
+        function SumPoint () {
+            point1 = document.getElementById("first_num").value * 20;
+            point2 = document.getElementById("two_num").value * 20;
+            point3 = document.getElementById("three_num").value * 20;
+            kill1 = document.getElementById("first_kill").value * 20*300;
+            kill2 = document.getElementById("two_kill").value *20*300;
+            kill3 = document.getElementById("three_kill").value *20*300;
+            win = document.getElementById("win").value *3000;
+            document.getElementById("result").innerHTML = point1 + point2 + point3 + kill1 + kill2 + kill3 + win;
+            document.getElementById("batle").innerHTML = (point1 + point2 + point3 + kill1 + kill2 + kill3 + win) / 20;
+}
+        </script>
+</body>
+</html>
